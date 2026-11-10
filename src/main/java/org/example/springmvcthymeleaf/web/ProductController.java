@@ -11,6 +11,6 @@ public class ProductController {
     private ProductRepository productRepository;
     @GetMapping("/index")
     public String index(){
-        return "product";
+        return "products";
     }
 }
