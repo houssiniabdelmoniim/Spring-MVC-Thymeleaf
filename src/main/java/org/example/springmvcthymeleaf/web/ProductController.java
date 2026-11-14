@@ -31,4 +31,10 @@ public class ProductController {
         productRepository.deleteById(id);
         return "redirect:/index";
     }
+
+    @GetMapping("/newProduct")
+    public String newProduct(Model model){
+        model.addAttribute("product", new Product());
+        return "new-product";
+    }
 }
