@@ -21,7 +21,7 @@ public class SecurityConfig {
 
     @Bean
     public InMemoryUserDetailsManager inMemoryUserDetailsManager(){
-        PasswordEncoder encoder = new BCryptPasswordEncoder();
+        PasswordEncoder encoder = passwordEncoder();
         return new InMemoryUserDetailsManager(
                 User.withUsername("user1").password(passwordEncoder().encode("1234")).roles("USER").build(),
                 User.withUsername("user2").password(passwordEncoder().encode("1234")).roles("USER").build(),
