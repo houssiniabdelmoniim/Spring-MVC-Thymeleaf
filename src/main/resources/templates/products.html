@@ -24,7 +24,7 @@
                     <td th:text="${p.name}"></td>
                     <td th:text="${p.price}"></td>
                     <td th:text="${p.quantity}"></td>
-                    <td>
+                    <td sec:authorize="hasRole('ADMIN')">
                         <a class="btn btn-danger" th:href="@{/admin/delete(id=${p.id})}">Delete </a>
                     </td>
                 </tr>
