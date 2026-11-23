@@ -1,5 +1,6 @@
 package org.example.springmvcthymeleaf.web;
 
+import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 import org.example.springmvcthymeleaf.entities.Product;
 import org.example.springmvcthymeleaf.repository.ProductRepository;
@@ -54,6 +55,11 @@ public class ProductController {
 
     @GetMapping("/login")
     public String login(){
+        return "login";
+    }
+    @GetMapping("/logout")
+    public String logout(HttpSession session){
+        session.invalidate();
         return "login";
     }
 }
