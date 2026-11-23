@@ -10,7 +10,21 @@
 </head>
 <body>
 <div class="p-3" layout:fragment="content1">
-    <h3 class="text-danger">Not Authorized</h3>
+    <div class="row">
+        <div class="col col-md-6">
+            <form method="post" th:action="@{login}">
+                <div class="mb-3">
+                    <label class="form-label">Username</label>
+                    <input type="text" name="username" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control">
+                </div>
+                <button class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
 </div>
 </body>
 </html>
